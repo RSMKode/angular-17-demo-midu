@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  transition: all 0.3s ease;
+}
+li:hover {
+  scale: 1.05;
+  cursor: pointer;
+}

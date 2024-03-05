@@ -1,0 +1,19 @@
+<section>
+  @if (isLoggedIn) {
+  <p>Bienvenido {{ username }}</p>
+  <img (click)="greet()" src="https://github.com/RSMKode.png" alt="photo" />
+  @if (favGame) {
+  <p>Favorite game: {{ favGame }}</p>
+  }
+  <button (click)="logout()">Logout</button>
+
+  <app-games
+    (addFavoriteEvent)="getFavorite($event)"
+    username="{{ username }}"
+  />
+  } @else {
+  <p>Iniciar sesión</p>
+  <button (click)="login()">Login</button>
+  }
+  <!-- <p>prueba</p> -->
+</section>
